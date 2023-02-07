@@ -8,19 +8,75 @@ All about the variables
 using namespace std;
 
 int main() {
-    string num1;
-    string num2;
-    int total;
+    float num1, num2;
 
-    cout << "Please enter a whole number: ";
+    cout << "Please enter number1: ";
     cin >> num1;
 
-    cout << "The value of num1 is: " << num1 << endl;
-
-    cout << "Please enter another number: ";
+    cout << "Please enter number2: ";
     cin >> num2;
 
-    cout << "The value of num2 is: " << num2 << endl;
+    cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+    cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+    cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+    cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+
+    // string line3;
+    // char ch;
+
+    // cout << "Please enter your first name: ";
+    // cin >> line3;
+
+    // // line3 = "( > 0 < )     *      Author: <Yo\rur Name>    *  ( \" )_( \" )\n";
+    // // cout << line3 << endl;
+    // cout << "Press any character and enter to quit: ";
+    // // cin >> ch;
+    // // cin.ignore();
+    // cin.get();
+    // cin.get();
+    // line3 = "( > 0 < )     *      Author: <Yo-\tur Name>    *  ( \" )_( \" )";
+    // cout << line3 << endl;
+    // line3 = "( > 0 < )     *      Author: <Yo--\tur Name>    *  ( \" )_( \" )";
+    // cout << line3 << endl;
+    // line3 = "( > 0 < )     *      Author: <Yo---\tur Name>    *  ( \" )_( \" )";
+    // cout << line3 << endl;
+    // line3 = "( > 0 < )     *      Author: <Yo----\tur Name>    *  ( \" )_( \" )";
+    // cout << line3 << endl;
+    // string firstName;
+    // string lastName;
+    // string fullName;
+
+    // // cout << "Please enter your name separated by a space: ";
+    // // cin >> firstName >> lastName;
+
+    // cout << "Please enter your first name: ";
+    // getline(cin, firstName);
+    // // cin >> firstName;
+
+
+    // cout << "Please enter your last name: ";
+    // getline(cin, lastName);
+    // // cin >> lastName;
+
+    // fullName = firstName + " " + lastName;
+    // // cout << fullName << endl;
+    // // cout << "Welcome " + fullName << endl;
+    // cout << "Welcome " << fullName << endl;
+    // cout << "Welcome " << firstName + " " + lastName << endl;
+
+    // string num1;
+    // string num2;
+    // int total;
+
+    // cout << "Please enter a whole number: ";
+    // cin >> num1;
+
+    // cout << "The value of num1 is: " << num1 << endl;
+
+    // cout << "Please enter another number: ";
+    // cin >> num2;
+
+    // cout << "The value of num2 is: " << num2 << endl;
 
     // WRONG WAY!!! num1 + num2 = total;
     // total = num1 + num2;
