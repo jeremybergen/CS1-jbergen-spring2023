@@ -3,7 +3,7 @@
     ASCII Art - using literals and variables
     
     Updated By: Jeremy Bergen #FIXME1 fixed
-    Date: ... #FIXME2
+    Date: 02/03/23 #FIXME2 fixed
     
     This program produces an ASCII art on the console.
     Algorithm steps: 
@@ -20,6 +20,8 @@ using namespace std; //resolve cout, cin, and endl names
 int main()
 {
     //FIXME3: declare a variable to store name
+    //fixed
+    //declaring variable for name...
     //FIXME4: prompt user to enter their name and store the value in variable
     
     //FIXME5: greet the name using the variable as the following output
