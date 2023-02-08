@@ -8,8 +8,15 @@ All about the variables
 using namespace std;
 
 int main() {
-    int inputSeconds;
-    int numHours, numMins, numSeconds;
+    // int num1, num2;
+
+    // cout << "Please enter two numbers separated by a space: ";
+    // cin >> num1 >> num2;
+
+    // cout << num1 << "/" << num2 << "=" << num1/num2 << endl;
+    // cout << num1 << "/" << num2 << "=" << float(num1)/num2 << endl;
+    unsigned int inputSeconds;
+    unsigned int numHours, numMins, numSeconds;
 
     cout << "How many seconds are there: ";
     cin >> inputSeconds;
