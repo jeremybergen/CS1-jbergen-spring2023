@@ -31,19 +31,23 @@ using namespace std;
 //     return firstname;
 // }
 
-void printNum(int num1) {
-    int num2;
-    cout << "inside printNum num1: " << &num1 << endl;
-    cout << "inside printNum num2: " << &num2 << endl;
-}
+// int printNum(int num1) {
+//     int num2;
+//     cout << "inside printNum num1: " << &num1 << endl;
+//     cout << "inside printNum num2: " << &num2 << endl;
+//     return num2;
+// }
+
+
 
 int main() {
-    int num1;
-    int num2;
-    num1 = 42;
-    cout << "inside main num1: " << &num1 << endl;
-    cout << "inside main num2: " << &num2 << endl;
-    printNum(num1);
+    
+    // int num1;
+    // int num2;
+    // num1 = 42;
+    // cout << "inside main num1: " << &num1 << endl;
+    // cout << "inside main num2: " << &num2 << endl;
+    // printNum(num1);
     // string playerName;
     // playerName = promptName();
     // greetUser(playerName);

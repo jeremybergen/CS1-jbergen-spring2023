@@ -13,6 +13,7 @@ step 6: print area and perim
 #include <iostream>
 #include <string>
 #include <cstdio>
+#include <cstdlib>
 
 using namespace std;
 
@@ -37,8 +38,23 @@ int promptSides() {
 }
 
 int calcArea(int s1, int s2) {
+    cout << "Inside int calcArea" << endl;
     int area;
     area = s1 * s2;
+    return area;
+}
+
+float calcArea(float s1, float s2) {
+    cout << "Inside float calcArea" << endl;
+    float area;
+    area = s1 * s2;
+    return area;
+}
+
+float calcArea(string s1, string s2) {
+    cout << "Inside string calcArea" << endl;
+    float area;
+    area = atof(s1.c_str()) * atof(s2.c_str());
     return area;
 }
 
@@ -58,31 +74,35 @@ void printVals(int area, int perim, int s1, int s2) {
 
 int main() {
     string name;
-    int side1, side2;
-    int rectangleArea;
-    int rectanglePerim;
+    string side1, side2;
+    float rectangleArea;
+    // int side1, side2;
+    // int rectangleArea;
+    // int rectanglePerim;
     //prompt name
-    name = promptName();
-    //greet name
-    greetPerson(name);
+    // name = promptName();
+    // //greet name
+    // greetPerson(name);
 
     //prompt for sides
-    side1 = promptSides();
-    side2 = promptSides();
+    // side1 = promptSides();
+    // side2 = promptSides();
     // cout << "DEBUG: side1: " << side1 << endl;
     // cout << "DEBUG: side2: " << side2 << endl;
 
     //calc area
+    side1 = "42.5";
+    side2 = "12.3";
     rectangleArea = calcArea(side1, side2);
 
     //calc perim
-    rectanglePerim = calcPerim(side1, side2);
+    // rectanglePerim = calcPerim(side1, side2);
 
-    // cout << "DEBUG: Area: " << rectangleArea << endl;
+    cout << "DEBUG: Area: " << rectangleArea << endl;
     // cout << "DEBUG: Perimeter: " << rectanglePerim << endl;
 
     //print values
-    printVals(rectangleArea, rectanglePerim, side1, side2);
+    // printVals(rectangleArea, rectanglePerim, side1, side2);
 
     return 0;
 }
