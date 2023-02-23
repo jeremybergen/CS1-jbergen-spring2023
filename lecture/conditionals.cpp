@@ -14,67 +14,99 @@ void playGame();
 
 int main()
 {
-    int num1;
-    // bool answer;
+    int num1, num2;
 
-    // num1 = 10;
-    // num2 = 11;
+    cout << "Please enter two numbers separated by a space: " << endl;
+    cin >> num1 >> num2;
 
-    // cout << boolalpha << !(num1 < num2) << endl;
-    // cout << boolalpha << !(num1 <= num2) << endl;
-
-
-
-    // if (num1 < 0) {
-    //     num1 = num1 * -1;
-    // }
-    // if (num1 < 0) {
-    //     num1 = abs(num1);
-    // }
-
-    // if (num1 == 0) {
-    //     cout << "num1 is zero" << endl;
-    // }
-    // else
-    // {
-    //     if (num1 < 0)
-    //     {
-    //         num1 = abs(num1);
-    //     }
-    //     if (num1 % 2 == 0)
-    //     {
-    //         cout << "num1 is even" << endl;
-    //     }
-    //     else
-    //     {
-    //         cout << "num1 is odd" << endl;
-    //     }
-    // }
-
-
-    cout << "1. print nums" << endl;
-    cout << "2. read nums" << endl;
-    cout << "3. play game" << endl;
-    cout << "4. quit" << endl;
-    cout << "Please enter a selection: ";
-    cin >> num1;
-    switch(num1) {
-        case 1:
-            cout << "We will print some numbers now" << endl;
-            break;
-        case 2:
-            cout << "Let's read more numbers" << endl;
-            break;
-        case 3: 
-            cout << "Shall we play a game?" << endl;
-            playGame();
-            break;
-        case 4:
-            cout << "I guess you want to quit" << endl;
-            break;
-        default:
-            cout << "Why do you not follow the menu...rude..." << endl;
+    if (!(num1 > 0 && num2 > 0)) {
+        cout << "Both numbers are positive!" << endl;
+    } else if (!(num1 > 0 && num2 < 0)) {
+        cout << "Num2 is negative and num1 is positive" << endl;
+    } else if (!(num1 < 0 && num2 > 0)) {
+        cout << "num1 is negative and num2 is positive" << endl;
+    } else {
+        cout << "Both numbers are negative or zero" << endl;
     }
+    return 0;
+}
+
+void sayHello()
+{
+    // int someNumber;
+    cout << "Hello from the function" << endl;
+}
+
+void playGame() {
+    cout << "We are now going to play global thermonuclear war" << endl;
+}
+
+
+
+
+    // char num1;
+    // // bool answer;
+
+    // // num1 = 10;
+    // // num2 = 11;
+
+    // // cout << boolalpha << !(num1 < num2) << endl;
+    // // cout << boolalpha << !(num1 <= num2) << endl;
+
+
+
+    // // if (num1 < 0) {
+    // //     num1 = num1 * -1;
+    // // }
+    // // if (num1 < 0) {
+    // //     num1 = abs(num1);
+    // // }
+
+    // // if (num1 == 0) {
+    // //     cout << "num1 is zero" << endl;
+    // // }
+    // // else
+    // // {
+    // //     if (num1 < 0)
+    // //     {
+    // //         num1 = abs(num1);
+    // //     }
+    // //     if (num1 % 2 == 0)
+    // //     {
+    // //         cout << "num1 is even" << endl;
+    // //     }
+    // //     else
+    // //     {
+    // //         cout << "num1 is odd" << endl;
+    // //     }
+    // // }
+
+
+    // cout << "A. print nums" << endl;
+    // cout << "B. read nums" << endl;
+    // cout << "C. play game" << endl;
+    // cout << "D. quit" << endl;
+    // cout << "Please enter a selection: ";
+    // cin >> num1;
+
+    // // cout << "You entered " << char(int(num1)) << endl;
+    // switch(num1) {
+    //     case 'A':
+    //         cout << "We will print some numbers now" << endl;
+    //         break;
+    //     case 'B':
+    //         cout << "Let's read more numbers" << endl;
+    //         break;
+    //     case 67: 
+    //         cout << "Shall we play a game?" << endl;
+    //         playGame();
+    //         break;
+    //     case 68:
+    //         cout << "I guess you want to quit" << endl;
+    //         break;
+    //     default:
+    //         cout << "Why do you not follow the menu...rude..." << endl;
+    // }
     // switch(num1%2) {
     //     case 0:
     //         if (num1 == 0) {
@@ -116,15 +148,3 @@ int main()
     //     cout << "Outside of if" << endl;
     //     cout << numInsideIf << endl;
 
-    return 0;
-}
-
-void sayHello()
-{
-    // int someNumber;
-    cout << "Hello from the function" << endl;
-}
-
-void playGame() {
-    cout << "We are now going to play global thermonuclear war" << endl;
-}
