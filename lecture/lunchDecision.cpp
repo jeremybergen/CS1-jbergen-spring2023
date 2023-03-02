@@ -6,6 +6,7 @@ Where should I eat lunch?
 #include <iostream>
 #include <string>
 #include <random>
+#include <cassert>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ void promptName(string&);
 void greetVictim(string);
 void getInfo(int&, int&, int&);
 string findFood(int, int, int);
+void tests();
 
 int main() {
     string victimsName;
@@ -20,6 +22,7 @@ int main() {
     string whereToGo;
 
     srand(time(0));
+    tests();
 
     promptName(victimsName);
     greetVictim(victimsName);
@@ -38,6 +41,13 @@ int main() {
     cout << "You are going to go to...(drumroll...............): " << endl << whereToGo << endl;
 
     return 0;
+}
+
+void tests() {
+    string result;
+    result = findFood(0, 0, 0);
+    assert(result == "Taco Bell" || result == "The Caf" || result == "Nowhere");
+    cout << "All test cases passed" << endl;
 }
 
 string findFood(int distance, int price, int temperature) {
