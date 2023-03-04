@@ -13,7 +13,7 @@ int main() {
     do {
         cout << "Please enter y to quit: ";
         cin >> inputChar;
-    } while(inputChar != 'y');
+    } while(inputChar != 'y' && inputChar != 'Y');
     // while(!(inputChar == 'y')) {
     //     cout << "Please enter y to quit: ";
     //     cin >> inputChar;
