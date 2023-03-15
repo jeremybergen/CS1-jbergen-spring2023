@@ -14,20 +14,57 @@ using namespace std;
 // void printArray(char[], size_t);
 //                 char **argv
 int main(int argc, char *argv[]) {
-    string *largeNums = new string[200000000];
-    int *heapNum = new int;
-    // cout << "The size of largeNums is: " << sizeof(largeNums) << endl;
+    // int *image = new int[5][100][4];
+    // int board[3][3];
 
-    // cout << "Press enter to quit: ";
-    // cin.get();
-    int counter = 0;
-    while(counter < 200000000) {
-        largeNums[counter] = "random()";
-        counter++;
-    }
+    // cout << "board: " << board << endl;
+    // for(int i = 0; i < 3; i++) {
+    //     for(int j = 0; j < 3; j++) {
+    //         cout << "&board[" << i << "][" << j << "]: " << &board[i][j] << endl;
+    //     }
+    // }
 
-    delete heapNum;
-    delete[] largeNums;
+    // for(int i = 0; i < 3; i++) {
+    //     for(int j = 0; j < 3; j++) {
+    //         board[i][j] = ' ';
+    //     }
+    // }
+
+    // board[1][1] = 'X';
+    // board[0][0] = 'O';
+    // board[0][2] = 'X';
+    // board[2][0] = 'O';
+    // board[1][0] = 'X';
+    // board[1][2] = 'O';
+
+    // cout << "-------" << endl;
+    // for(int i = 0; i < 3; i++) {
+    //     cout << "|";
+    //     for(int j = 0; j < 3; j++) {
+    //         cout << board[i][j] << "|";
+    //     }
+    //     cout << endl;
+    //     cout << "-------" << endl;
+    // }
+    // int nums[10];
+
+    // for(int i = 0; i < 10; i++) {
+    //     nums[i] = i;
+    // }
+    // string *largeNums = new string[200000000];
+    // int *heapNum = new int;
+    // // cout << "The size of largeNums is: " << sizeof(largeNums) << endl;
+
+    // // cout << "Press enter to quit: ";
+    // // cin.get();
+    // int counter = 0;
+    // while(counter < 200000000) {
+    //     largeNums[counter] = "random()";
+    //     counter++;
+    // }
+
+    // delete heapNum;
+    // delete[] largeNums;
     // int num1;
     // int *ptr1 = new int;
 

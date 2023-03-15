@@ -7,13 +7,48 @@ We go round and round....or loops
 
 using namespace std;
 
-int main() {
-    char inputChar = 'y';
+bool program();
 
-    do {
-        cout << "Please enter y to quit: ";
-        cin >> inputChar;
-    } while(inputChar != 'y' && inputChar != 'Y');
+int main() {
+    bool keepRunning = true;
+    while (keepRunning) {
+        if (!program()) {
+            keepRunning = false;
+        } else {
+            cin.ignore(100, '\n');
+            cout << "Enter to continue...";
+            cin.get();
+        }
+    }
+    cout << "Closing program!" << endl;
+
+
+    return 0;
+}
+
+bool program() {
+    char runagain;
+    int num1 = 10;
+    cout << num1 + 42 << endl;
+    cout << "Do you want to run again? ";
+    cin >> runagain;
+    if (runagain == 'y' || runagain == 'Y') {
+        return true;
+    }
+    return false;
+}
+
+
+
+
+
+
+    // char inputChar = 'y';
+
+    // do {
+    //     cout << "Please enter y to quit: ";
+    //     cin >> inputChar;
+    // } while(inputChar != 'y' && inputChar != 'Y');
     // while(!(inputChar == 'y')) {
     //     cout << "Please enter y to quit: ";
     //     cin >> inputChar;
@@ -62,6 +97,3 @@ int main() {
     // }
 
     // cout << "after for loop " << i << endl;
-
-    return 0;
-}

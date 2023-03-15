@@ -24,11 +24,20 @@ int main() {
 }
 
 void tests() {
-    assert(addNums(42, 15) == 62);
-    assert(addNums(10, 20) == 35);
+    double answer = addNums(10, 12);
+    double expected = 22;
+    assert(answer == expected); // test case 1
+    assert(addNums(-5, 10) == 5); // test case 2
+
+
+    assert(addNums(42, 15) == 57);
+    assert(addNums(-9000, 9000) == 0); // test case 2
+
+    // assert(addNums(42, 15) == 62);
+    // assert(addNums(10, 20) == 35);
     cout << "All test cases passed" << endl;
 }
 
 int addNums(const int &num1, const int &num2) {
-    return num1 + num2 + 5;
+    return num1 + num2;
 }
