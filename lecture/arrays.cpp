@@ -5,23 +5,80 @@ Arrays!!!
 */
 #include <iostream>
 #include <string>
+#include <random>
 
 using namespace std;
 
-void getArraySize(size_t&);
-void populateArray(char[], size_t);
-
+// void getArraySize(size_t&);
+// void populateArray(char[], size_t);
+// void printArray(char[], size_t);
+//                 char **argv
 int main(int argc, char *argv[]) {
-    size_t arrSize = 10;
-    getArraySize(arrSize);
-    char nums[arrSize];
+    string *largeNums = new string[200000000];
+    int *heapNum = new int;
+    // cout << "The size of largeNums is: " << sizeof(largeNums) << endl;
 
-    // int* ptr1;
+    // cout << "Press enter to quit: ";
+    // cin.get();
+    int counter = 0;
+    while(counter < 200000000) {
+        largeNums[counter] = "random()";
+        counter++;
+    }
+
+    delete heapNum;
+    delete[] largeNums;
+    // int num1;
+    // int *ptr1 = new int;
+
+    // cout << "&num1: " << &num1 << endl;
+    // cout << "&ptr1: " << &ptr1 << endl;
+    // cout << "ptr1: " << ptr1 << endl;
+
+    // delete ptr1;
+
+
+    // size_t arrSize = 10;
+    // getArraySize(arrSize);
+    // char nums[arrSize];
+
+    // // int* ptr1;
     
+    // cout << "The size of nums is: " << sizeof(nums) << endl;
 
-    cout << "The size of nums is: " << sizeof(nums) << endl;
+    // populateArray(nums, arrSize);
 
-    populateArray(nums, arrSize);
+    // printArray(nums, arrSize);
+
+    return 0;
+}
+
+// void printArray(char characters[], size_t arrSize) {
+//     for (int i = 0; i < arrSize; i++) {
+//         cout << "characters[" << i << "]: " << characters[i] << endl;
+//     }
+// }
+
+// void getArraySize(size_t& arrSize) {
+//     cout << "Please enter how many elements you want in your array: ";
+//     cin >> arrSize;
+// }
+
+// void populateArray(char characters[], size_t arrSize) {
+//     // cout << "The size of characters is: " << sizeof(characters) << endl;
+//     for(int i = 0; i < arrSize; i++) {
+//         cout << "Please enter a character: ";
+//         cin >> characters[i];
+//     }
+// }
+
+
+
+
+
+
+
+
 
 
     // int counter = 0;
@@ -31,11 +88,6 @@ int main(int argc, char *argv[]) {
     //     counter++;
     // }
 
-
-
-    for (int i = 0; i < arrSize; i++) {
-        cout << "nums[" << i << "]: " << nums[i] << endl;
-    }
 
     // cout << "The size of nums is: " << sizeof(nums) << endl;
 
@@ -99,17 +151,3 @@ int main(int argc, char *argv[]) {
     // cout << "&num3: " << &num3 << endl;
     // cout << "&num4: " << &num4 << endl;
 
-    return 0;
-}
-
-void getArraySize(size_t& arrSize) {
-    cout << "Please enter how many elements you want in your array: ";
-    cin >> arrSize;
-}
-
-void populateArray(char characters[], size_t arrSize) {
-    for(int i = 0; i < arrSize; i++) {
-        cout << "Please enter a character: ";
-        cin >> characters[i];
-    }
-}
