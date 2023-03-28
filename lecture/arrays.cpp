@@ -12,8 +12,91 @@ using namespace std;
 // void getArraySize(size_t&);
 // void populateArray(char[], size_t);
 // void printArray(char[], size_t);
+void printArray(int[], size_t);
 //                 char **argv
 int main(int argc, char *argv[]) {
+    // size_t arrSize1, arrSize2, arrSize3;
+    // arrSize1 = 5;
+    // arrSize2 = 10;
+    // arrSize3 = 5;
+
+    // int nums[arrSize1][arrSize2][arrSize3];
+    size_t arrSize = 5;
+    int nums[arrSize];
+
+    nums[0] = 42;
+    nums[1] = 15;
+    nums[2] = 23;
+    nums[3] = 9000;
+    nums[4] = -15;
+    printArray(nums, arrSize);
+
+
+    return 0;
+}
+
+void printArray(int numbers[], size_t arrSize) {
+    for (size_t i = 0; i < arrSize; i++) {
+        cout << "numbers[" << i << "]: " << numbers[i] << endl;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // int num1;
+    // int *ptr1 = &num1;
+
+    // string *myWords = new string[10];
+    // string *myWord = new string;
+
+    // delete[] myWords;
+    // delete myWord;
+    // string myWords[10];
+
+    // myWords[0] = "This";
+    // myWords[1] = "is";
+
+
+    // cout << "argc: " << argc << endl;
+    // for (int i = 0; i < argc; i++) {
+    //     cout << "argv[" << i << "]: " << argv[i] << endl;
+    // }
+
+    // if ((string)argv[1] == "test" && argc >= 2) {
+    //     // run this only if you call the program with test (ex: ./arrays.out test):
+    //     cout << "We are running tests!" << endl;
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // int *image = new int[5][100][4];
     // int board[3][3];
 
@@ -86,9 +169,6 @@ int main(int argc, char *argv[]) {
     // populateArray(nums, arrSize);
 
     // printArray(nums, arrSize);
-
-    return 0;
-}
 
 // void printArray(char characters[], size_t arrSize) {
 //     for (int i = 0; i < arrSize; i++) {
