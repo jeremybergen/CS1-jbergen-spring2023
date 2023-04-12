@@ -10,38 +10,42 @@ Structures
 
 using namespace std;
 
-template <class T1, class T2>
-struct Rectangle {
-    T1 side1 = 0;
-    T1 side2 = 0;
-    T2 area = 0;
-    T2 perimeter = 0;
+struct Classes {
+    string className;
+    string professor;
 };
 
-struct Point {
-    int x;
-    int y;
+struct Student {
+    string firstName;
+    string lastName;
+    Classes myClass;
 };
-
-template <class T1, class T2>
-void getSides(Rectangle<T1, T2>*);
-
-template <class T1, class T2>
-void calcArea(Rectangle<T1, T2>*);
-
-template <class T1, class T2>
-void calcPerimeter(Rectangle<T1, T2>*);
-
-template <class T1, class T2>
-void printValues(Rectangle<T1, T2>*);
 
 int main(int argc, char *argv[]) {
-    Rectangle<int, float> *rect1 = new Rectangle<int, float>({5, 100, 2});
-    Rectangle<double, double> *rect2 = new Rectangle<double, double>();
-    Rectangle<string, string> *rect3 = new Rectangle<string, string>();
+    Student student1;
+
+    student1.firstName = "Luke";
+    student1.lastName = "Skywalker";
+    student1.myClass.className = "CSCI111";
+    student1.myClass.professor = "Jeremy";
+
+    cout << "student1.firstName: " << student1.firstName << endl;
+    cout << "student1.myClass.professor: " << student1.myClass.professor << endl; 
+
+
+
+
+
+
+
+
+
+    // Rectangle<int, float> *rect1 = new Rectangle<int, float>({5, 100, 2});
+    // Rectangle<double, double> *rect2 = new Rectangle<double, double>();
+    // Rectangle<string, string> *rect3 = new Rectangle<string, string>();
     
 
-    Point point1 = {0, 0};
+    // Point point1 = {0, 0};
 
     // getSides(rect1);
     // calcArea(rect1);
@@ -57,7 +61,7 @@ int main(int argc, char *argv[]) {
     //      << " and a perimeter of " << rect1->perimeter << endl;
 
 
-    delete rect1;
+    // delete rect1;
     // Rectangle rect1;
     // Point point1;
 
@@ -111,31 +115,58 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-template <class T1, class T2>
-void getSides(Rectangle<T1, T2>* rect) {
-    cout << "Please enter side1: ";
-    cin >> rect->side1;
 
-    cout << "Please enter side2: ";
-    cin >> rect->side2;
-}
 
-template <class T1, class T2>
-void calcArea(Rectangle<T1, T2>* rect) {
-    rect->area = rect->side1 * rect->side2;
-}
+// template <class T1, class T2>
+// struct Rectangle {
+//     T1 side1 = 0;
+//     T1 side2 = 0;
+//     T2 area = 0;
+//     T2 perimeter = 0;
+// };
 
-template <class T1, class T2>
-void calcPerimeter(Rectangle<T1, T2>* rect) {
-    rect->perimeter = (2 * rect->side1) + (2 * rect->side2);
-}
+// struct Point {
+//     int x;
+//     int y;
+// };
 
-template <class T1, class T2>
-void printValues(Rectangle<T1, T2>* rect) {
-    cout << "Your rectangle with sides " << rect->side1 << " and " << rect->side2
-         << " has an area of " << rect->area
-         << " and a perimeter of " << rect->perimeter << endl;
-}
+// template <class T1, class T2>
+// void getSides(Rectangle<T1, T2>*);
+
+// template <class T1, class T2>
+// void calcArea(Rectangle<T1, T2>*);
+
+// template <class T1, class T2>
+// void calcPerimeter(Rectangle<T1, T2>*);
+
+// template <class T1, class T2>
+// void printValues(Rectangle<T1, T2>*);
+
+// template <class T1, class T2>
+// void getSides(Rectangle<T1, T2>* rect) {
+//     cout << "Please enter side1: ";
+//     cin >> rect->side1;
+
+//     cout << "Please enter side2: ";
+//     cin >> rect->side2;
+// }
+
+// template <class T1, class T2>
+// void calcArea(Rectangle<T1, T2>* rect) {
+//     rect->area = rect->side1 * rect->side2;
+// }
+
+// template <class T1, class T2>
+// void calcPerimeter(Rectangle<T1, T2>* rect) {
+//     rect->perimeter = (2 * rect->side1) + (2 * rect->side2);
+// }
+
+// template <class T1, class T2>
+// void printValues(Rectangle<T1, T2>* rect) {
+//     cout << "Your rectangle with sides " << rect->side1 << " and " << rect->side2
+//          << " has an area of " << rect->area
+//          << " and a perimeter of " << rect->perimeter << endl;
+// }
 
 
 
