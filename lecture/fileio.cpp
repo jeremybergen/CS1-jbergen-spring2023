@@ -9,17 +9,23 @@ file i/o
 
 using namespace std;
 
+void readData(fstream&, string[], int&);
+void writeData(fstream&, string[], int);
+
 int main(int argc, char *argv[]) {
     // int num1, num2, num3, num4, num5;
-    int nums[100];
+    string nums[100];
     int lineCounter = 0;
-    ifstream fin;
-    ofstream fout;
+    // ifstream fin;
+    // ofstream fout;
+    fstream fs;
 
-    fin.open("files/input.txt");
+    fs.open("files/fstemp.txt", fstream::in | fstream::out | fstream::app);
+
+    // fin.open("files/input.txt");
     // Windows
     // fin.open("files\\input.txt");
-    fout.open("files/output.txt");
+    // fout.open("files/output.txt");
     // Absolute path (usually should not do)
     // fout.open("/home/jbergen/projects/CS1-jbergen/lecture/files/output.txt");
     //Windows
@@ -33,16 +39,29 @@ int main(int argc, char *argv[]) {
     // fout << "num4: " << num4 << endl;
     // fout << "num5: " << num5 << endl;
 
-    while(!fin.eof()) {
-        fin >> nums[lineCounter];
-        lineCounter++;
-    }
+    readData(fs, nums, lineCounter);
 
-    for(int i = 0; i < lineCounter; i++) {
-        cout << "nums[" << i << "]: " << nums[i] << endl;
-    }
+    fs.seekg(0);
+    writeData(fs, nums, lineCounter);
 
-    fin.close();
-    fout.close();
+    // fin.close();
+    // fout.close();
+    fs.close();
     return 0;
+}
+
+void writeData(fstream& fout, string nums[], int lineCounter) {
+    // cout << "DEBUG: lineCounter: " << lineCounter << endl;
+    for(int i = 0; i < lineCounter; i++) {
+        fout << "nums[" << i << "]: " << nums[i] << endl;
+    }
+}
+
+void readData(fstream& fin, string nums[], int& lineNumber){
+    while(!fin.eof()) {
+        // if (fin >> nums[lineCounter])
+        // cout << "DEBUG: inside while loop" << endl;
+        getline(fin, nums[lineNumber]);
+        lineNumber++;
+    }
 }
