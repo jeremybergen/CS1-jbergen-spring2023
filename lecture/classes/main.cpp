@@ -5,7 +5,14 @@ Classes
 */
 #include <iostream>
 
+// #define PI 3.14159
+#define DEBUG(s) cout << "DEBUG: " << s << endl;
+
 using namespace std;
+
+typedef long long big_int;
+
+using large_int = long long;
 
 // struct Student {
 //     string fName, lName;
@@ -59,7 +66,23 @@ class Student {
 };
 
 int main(int argc, char *argv[]) {
+    size_t tempnum;
+    unsigned long tempnum2;
+
+    big_int myNum;
+    long long myNum2;
+
+    myNum2 = 42;
+    myNum = (big_int)myNum2;
+
+    large_int myNum3;
+    long long myNum4;
+
+    DEBUG("Hello");
+
     Student stu1("", "Builder");
+
+    DEBUG(stu1.getFName());
 
     cout << "Hello " << stu1.getFName() << " " << stu1.getLName() << ", you have a gpa of: " << stu1.getGpa() << endl;
 
