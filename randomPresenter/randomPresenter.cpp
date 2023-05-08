@@ -26,12 +26,23 @@ int main(int argc, char *argv[]) {
     int arrSize = 0;
     ifstream fin;
     fin.open("names.csv");
+    cout << "DEBUG: rdstate(): " << fin.rdstate() << endl;
+    cout << boolalpha << "DEBUG: good(): " << fin.good() << endl;
+    cout << boolalpha << "DEBUG: eof(): " << fin.eof() << endl;
+    cout << boolalpha << "DEBUG: fail(): " << fin.fail() << endl;
+    cout << boolalpha << "DEBUG: bad(): " << fin.bad() << endl;
 
     // cout << "DEBUG: fin.tellg(): " << fin.tellg() << endl;
     countLines(fin, arrSize);
+    cout << "After countLines" << endl;
+    cout << "DEBUG: rdstate(): " << fin.rdstate() << endl;
+    cout << boolalpha << "DEBUG: good(): " << fin.good() << endl;
+    cout << boolalpha << "DEBUG: eof(): " << fin.eof() << endl;
+    cout << boolalpha << "DEBUG: fail(): " << fin.fail() << endl;
+    cout << boolalpha << "DEBUG: bad(): " << fin.bad() << endl;
     // fin.seekg(0, fin.beg);
-    fin.close();
-    fin.open("names.csv");
+    // fin.close();
+    // fin.open("names.csv");
 
     // cout << "DEBUG: fin.tellg(): " << fin.tellg() << endl;
     // cout << "DEBUG: arrSize: " << arrSize << endl;
@@ -52,12 +63,14 @@ int main(int argc, char *argv[]) {
 void countLines(ifstream& fin, int& numLines){
     string tmpBuf;
     numLines = 0;
-    // cout << "DEBUG: fin.tellg(): " << fin.tellg() << endl;
+    cout << "DEBUG: fin.tellg(): " << fin.tellg() << endl;
 
     while(getline(fin, tmpBuf)) {
         numLines++;
     }
-    // cout << "DEBUG: fin.tellg(): " << fin.tellg() << endl;
+    fin.clear();
+    fin.seekg(0);
+    cout << "DEBUG: fin.tellg(): " << fin.tellg() << endl;
 
     
     // cout << "DEBUG: fin.tellg(): " << fin.tellg() << endl;
