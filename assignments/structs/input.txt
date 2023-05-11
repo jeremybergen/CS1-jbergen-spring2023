@@ -1,2 +1,5 @@
 Johnny Lang 100 100 100 98
 Suzie Wang 95 85 75 80
+Jeremy Bergen 50 23 55 70
+Zacharias Herberderber 100 100 100 100
+Bob Wolfeschlegelsteinhausenbergerdorff 80 100 100 100
